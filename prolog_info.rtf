@@ -1,0 +1,76 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Facts - axioms on our knowledge base.\
+Rules - logic rules of that operates over facts like. X -> Y\
+Queries - Queries we do in prolog to ask if something is true or false.\
+\
+KnowledgeBase1 - collections of facts\
+	woman(mia).\
+	woman(jody).\
+	party.\
+	playAirGuitar(jody).\
+\
+KB2 - We add rules to facts x->y rules contains head:tail. If tail, then head.\
+		Facts and rules in KB are called clauses.\
+		Clauses split in facts and predicates (x - > y)\
+\
+KB3 -  We add predicates that have more than one condition. (X ^ Z - > Y)\
+	example: play(vincent):- \
+				listen(Vincent), happy(Vincent).\
+\
+		We create and operates inside predicates. If listen and happy then play.\
+\
+	  	we can make or statement with multiple predicates. X -> Y or Z -> Y == x or z -> y\
+\
+		can use play(butch):-\
+				happy(butch).\
+			      play(butch):-\
+ 				listen2music(butch).\
+			OR\
+			      play(butch):-\
+				happy(butch);\
+				listen2music(butch).\
+\
+, is AND ; is OR\
+				\
+\
+KB4 - nested predicates. X -> Y -> Z able to query now the database properly with Variables. Start in capital\
+		We call the usage of Variables matching expressions.\
+\
+KB5 - complex procedures with matching.\
+		example: joalous(marcellus, W)\
+\
+\
+TERMS\
+1. Atoms - constants. Any string of input. \'91;\'92 and \'91,\'92 are also atoms. Can create special atoms of @= ====> etc.. \
+2. Numbers = constants. Real numbers.. not used but can use floats. 30 is different than \'9230\'92. Be careful.\
+3. Variables - Variables that can be pass as argument to queries and predicates.\
+	Variables start with upper case.\
+	anonymous variable -> _. The we need to pass a variable but we don\'92t care about matching.\
+4. Complex terms ~ predicates. Functor (name of the function) + arguments. Number of arguments is the rarity of the complex term. Can do method overloading with Arity.\
+\
+\
+\
+MATCHING\
+CONSTANTS - If X and Y are constants then they only match if they are the same arm or same number.\
+VARIABLES - If X is a variable and Y is any type, then X will match Y and be instantiated to Y.\
+COMPLEX TERMS - They will match if:\
+		- they have the same functor and arty.\
+		- arguments match\
+		- variable instantiated are compatible.\
+TERMS - Match in case that all 3 previous steps matches.\
+\
+\
+\
+\
+\
+Questions - \
+1. Matching in prolog vs standard unification. Being pessimistic vs optimistic.\
+\
+\
+}

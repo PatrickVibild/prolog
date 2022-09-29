@@ -1,0 +1,3 @@
+check satisfy/4 some() implementation.
+
+Check the Slides from Lecture 8, why are there some issues with modelChecker1.pl

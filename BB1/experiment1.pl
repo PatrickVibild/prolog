@@ -1,3 +1,5 @@
+use strict;
+use warnings FATAL => 'all';
 /*************************************************************************
 
     File: experiment1.pl
